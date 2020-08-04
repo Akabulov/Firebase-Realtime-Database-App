@@ -4,9 +4,25 @@
       </div>
     <div class="card-body">
       
-      <div class="card-text">
-        <p>Lorem ipsum</p>
+      <div class="card-text form-group">
+        <p>File upload</p>
+
+        <input class="form-control" type="text" placeholder="Save with Key" name="id" [(ngModel)]="id">
+        <input class="form-control-file" type="file" (change)="showPreview($event)">
+        <br>
+        <button class="btn btn-secondary" (click)="save()">Save</button>
+
+
       </div>
+<hr>
+      <div class="card-text">
+        <p>File view</p>
+        <div style="display: flex;">
+          <input class="form-control" type="text" name="file" [(ngModel)]="file" placeholder="Enter Unique Search Key">
+          <button class="btn btn-secondary" (click)="view()">View</button>
+        </div>
+      </div>
+
     </div>
   
   </div>
